@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "cms-data-explorer": {
+      "command": "python",
+      "args": ["-m", "cms_data_explorer.mcp_server"],
+      "cwd": ".",
+      "env": {
+        "PYTHONPATH": "src"
+      }
+    }
+  }
+}

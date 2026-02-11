@@ -1,0 +1,29 @@
+[project]
+name = "cms-data-explorer"
+version = "0.1.0"
+description = "Query and analyze publicly available CMS healthcare datasets via MCP server"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "duckdb>=1.1",
+    "pandas>=2.0",
+    "click>=8.0",
+    "mcp[cli]>=1.0",
+    "pydantic>=2.0",
+    "rich>=13.0",
+    "platformdirs>=4.0",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "ruff"]
+
+[project.scripts]
+cms-explorer = "cms_data_explorer.cli:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
